@@ -295,6 +295,7 @@ bool applyJson(sfmData::SfMData & sfmData, boost::json::value & input)
     intrinsic->setSensorHeight((isDesqueezed)?filmbackHeight:filmbackHeight*pixelAspect);
     intrinsic->setDistortionObject(nullptr);
     intrinsic->setFocalLength(focalLength, pixelAspect);
+    intrinsic->setInitialFocalLength(focalLength, pixelAspect);
 
     if (model == "anamorphic4")
     {        
